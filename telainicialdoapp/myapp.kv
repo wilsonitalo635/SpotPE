@@ -1,0 +1,49 @@
+<GerenciadorTelas>:
+    PrimeiraTela:
+        name: "primeiratela"
+    SegundaTela:
+        name: "segundatela"
+
+<PrimeiraTela>:
+    canvas:
+        Color:
+            rgba: 1, 1, 1, 1
+        Rectangle:
+            pos: self.pos
+            size: self.size   
+    BoxLayout: 
+        orientation: "vertical"
+        padding: 30, 20
+        spacing: 100  
+        BoxLayout:
+            orientation: 'vertical'
+            spacing: 5
+            Image:
+                source: "imagem.png"
+            Label:
+                text: "SpotPE"
+                color: 0, 0, 0, 1
+                bold: True
+                font_size: 25
+                size_hint_y: None
+                height: 40
+            BoxLayout:
+                orientation: "vertical"
+                spacing: 20
+                size_hint_y: 1
+                BotaoMenu:
+                    text: "Área de Perigo"
+                BotaoMenu:
+                    text: "Denúncia"
+<BotaoMenu@ButtonBehavior+Label>:
+    canvas.before:
+        Color:
+            rgba: 0.1, 0.5, 0.7, 1     
+        RoundedRectangle: 
+            pos: self.pos
+            size: self.size 
+            radius: [20] 
+    bold: True   
+    font_size: 20
+                                    
+
